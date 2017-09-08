@@ -1,0 +1,8 @@
+---
+- name: download flink tarball
+  get_url:
+    url: http://www.apache.org/dyn/closer.lua/flink/flink-1.3.2/flink-1.3.2-bin-hadoop27-scala_2.11.tgz
+    dest: /home/vagrant
+
+- name: extract flink binary
+  shell: "tar xf flink-1.3.2-bin-hadoop27-scala_2.11.tgz"

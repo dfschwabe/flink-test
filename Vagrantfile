@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false # To generate a new ssh key and don't use the default Vagrant one
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   config.vm.provision "ansible" do |ansible|
+    ansible.verbose = "v"
     ansible.playbook = "provision.yml"
   end
 
